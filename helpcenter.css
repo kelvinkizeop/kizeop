@@ -927,6 +927,6 @@ text-decoration: none;
 .footer{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 20px; 
-    margin-top: 50%;
+    margin-top: 0%;
 }
 }

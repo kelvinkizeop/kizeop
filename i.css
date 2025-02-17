@@ -695,7 +695,7 @@ text-decoration: none;
   }
 
   .reviews-section {
-    min-width: 90%; /* Each card takes full width of the viewport */
+    min-width: 90%; 
     box-sizing: border-box;
     padding: 20px;
     margin-right: 10px;
@@ -1109,7 +1109,7 @@ text-decoration: none;
 .footer{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 20px; 
-    margin-top: 50%;
+    margin-top: 0%;
 }
 
 

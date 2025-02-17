@@ -580,7 +580,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr)); 
     padding: 40px;
-    margin-top: 5%;
+    margin-top: 0%;
     width: 100%;
     
 }

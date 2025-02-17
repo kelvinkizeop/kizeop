@@ -475,7 +475,7 @@ text-decoration: none;
        
       }
        .forum-section h3{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         color: #007bff;
         }
         .forum-section p{
@@ -553,11 +553,11 @@ text-decoration: none;
        
       }
        .forum-section h3{
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: #007bff;
         }
         .forum-section p{
-            font-size: 0.8rem; 
+            font-size: 1rem; 
             margin-left: 2%;
         }
         .community-banner img{
@@ -630,11 +630,11 @@ text-decoration: none;
    
   }
    .forum-section h3{
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     color: #007bff;
     }
     .forum-section p{
-        font-size: 0.8rem; 
+        font-size: 1rem; 
         margin-left: 2%;
     }
     .community-banner img{
@@ -706,16 +706,16 @@ text-decoration: none;
     margin-left: 0%;
    }
    .forum-section h3{
-    font-size: 10px;
+    font-size: 1.5rem;
     color: #007bff;
   
     }
     .forum-section p{
-        font-size: 0.55rem; 
+        font-size: 1rem; 
         margin-left: 5%;
     }
     .community-banner img{
-        width: 270px;
+        width: 300px;
         height: auto;
         margin-right: 25%;
         border-radius: 10px;

@@ -474,7 +474,7 @@ body {
     background-color:#32404D;
     color: white;
     padding: 20px;
-    margin: 130px;
+    margin: 13px;
     border: 5px solid #ddd;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -528,7 +528,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr)); 
     padding: 40px;
-    margin-top: 10%;
+    margin-top: 3%;
     
 }
 .footer-section ul li a {
@@ -565,6 +565,83 @@ text-decoration: none;
 .footer-section.payment img:hover {
     transform: scale(1.1); 
 }
+.summit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.summit-review-btn {
+    background: #007bff; 
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summit-review-btn:hover {
+    background: #0056b3; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.summit-review-btn:active {
+    background: #003d80; 
+    transform: scale(0.98);
+}
+
+.summit-form {
+    max-width: 600px; 
+    margin: 0 auto; 
+     margin-top: 2%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.summit-form input, 
+.summit-form textarea, 
+.summit-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.summit-form button {
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.summit-form button:hover {
+    background: #0056b3;
+}
+
+
+.summit-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+}
+
   @media (min-width: 921px)and  (max-width: 1300px){
     .site-name{
         font-size: 2.5rem;

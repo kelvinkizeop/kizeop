@@ -66,7 +66,10 @@ body {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
-
+.hamburger img{
+    position: relative;
+    bottom: 1%;
+}
 .menu-icon {
     width: 30px; 
     height: 30px;
@@ -794,6 +797,10 @@ text-decoration: none;
         width: 4rem;
         height: 4rem; 
     }
+    .hamburger img{
+        width: 4rem;
+        height: 4rem;
+    }
     #google_translate_element{
         margin-left: 2rem;
     }
@@ -832,7 +839,6 @@ text-decoration: none;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
     .whychooseUs-section div:nth-child(9) {
-        border: 3px solid rgb(88, 0, 189); 
         max-width: 500px;
         width: 100%;
         max-height: 400px;
@@ -841,7 +847,6 @@ text-decoration: none;
        }
 
 .whychooseUs-section div:nth-child(7) { 
-    border: 3px solid rgb(231, 30, 164); 
     max-width: 500px;
     width: 100%;
     max-height: 300px;
@@ -849,15 +854,12 @@ text-decoration: none;
     bottom: 1%;
 }
 .whychooseUs-section div:nth-child(2) { 
- 
     max-width: 500px;
     width: 100%;
     max-height: 400px;
     position: relative;
     bottom: 1%;
 }
-
-
     #hamburger{
         bottom: -1.5rem; 
         right: 1rem;
@@ -869,8 +871,6 @@ text-decoration: none;
     .intro-section {
           margin-top: 0%;
     }
- 
-
   }
 
   @media (max-width: 910px) {
@@ -892,6 +892,10 @@ text-decoration: none;
         display: flex;
         top: 0.1rem;
        
+    }
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
     }
     .vid-section{
         display: flex;
@@ -1011,6 +1015,12 @@ text-decoration: none;
     padding-left: 0%;
      
 }
+.hamburger img{
+    width: 2rem;
+    height: 4rem;
+    position: relative;
+   
+}
 .learn-more-btn3{
   
     left: 27rem;
@@ -1073,6 +1083,11 @@ text-decoration: none;
         top: -0.8rem;
         margin-left: 2rem;
        
+    }
+    .hamburger img{
+        width: 2rem;
+        height: 3rem;
+        position: relative;
     }
     #google_translate_element{
      display: block;
@@ -1626,9 +1641,12 @@ text-decoration: none;
     font-size: 1rem;
     margin-top: 0%;
     padding-left: 0%;
-    letter-spacing: 0px;
-    
-     
+    letter-spacing: 0px;   
+}
+.hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
 }
 .learn-more-btn3{
   

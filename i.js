@@ -89,6 +89,27 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('.scroll-reveal').forEach(element => {
     observer.observe(element);
 });
+document.querySelectorAll('.scroll-zoom').forEach(element => {
+    observer.observe(element);
+});
+document.querySelectorAll('.scroll-fade').forEach(element => {
+    observer.observe(element);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //sidebar drop down toggle
 document.querySelectorAll(".sidebar-dropdown").forEach(item => {

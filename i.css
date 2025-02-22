@@ -800,6 +800,8 @@ text-decoration: none;
     .hamburger img{
         width: 4rem;
         height: 4rem;
+        position: relative;
+        top: 10px;
     }
     #google_translate_element{
         margin-left: 2rem;

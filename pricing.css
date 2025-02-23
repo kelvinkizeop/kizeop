@@ -582,25 +582,7 @@ body {
     color: red;
 }
 
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
 
-.modal-content {
-    background: white;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 20px;
-}
 
 .close-modal {
     float: right;
@@ -725,9 +707,7 @@ body {
         position: relative;
         left: 5%;   
     }
-    .text1-header h1{
-        font-size: 2.5rem;
-    }
+   
     .sidebar {
         text-align: start;
         transform: translateX(-100%);
@@ -751,6 +731,99 @@ body {
 }
 
 
+@media (max-width: 910px) {
+    .site-name{
+        font-size: 2rem;
+        top: -1rem;
+    }
+    .logo{
+        width: 4rem;
+        height: 4rem; 
+    }
+    #google_translate_element{
+        margin-left: 2rem;
+    }
+    #hamburger{
+        bottom: -1.5rem; 
+        right: 1rem;
+        font-size: 3rem;
+        display: flex;
+        top: 0.1rem;
+       
+    }
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .menu{
+        display: none;
+    }
+    .sidebar {
+        text-align: start;
+        transform: translateX(-100%);
+        width: 50%;
+        height: 200vh;
+        display: block;
+    }
+    .sidebar-submenu li a {
+        font-size: 1.1rem;  
+      }
+       .sidebar ul div a{
+        font-size: 1.2rem;
+      }
+       .sidebar-dropdown .material-symbols-outlined {
+        font-size: 30px;
+      }
+    
+      .sidebar-submenu .material-symbols-outlined {
+        font-size: 20px;
+      }
+    .vid-section{
+        display: flex;
+        margin-bottom: 5%; 
+    }  
+    .video{
+        flex: 1;
+        display: flex;
+        margin: 10px;
+        position: relative;
+        left: 0%;   
+    }
+    .vid-img{
+        flex: 1;
+        padding-left: 0px; 
+        margin: 8px;   
+    }
+    .plan-card {
+        padding: 20px;
+        max-width: 400px;
+        margin: 50px;
+        width: 85%;
+    }
+    .plan-card-vip{
+        margin: 30%;
+        padding: 20px;
+        max-width: 400px;
+        position: relative;
+        right: 30%;
+        width: 85%;
+    
+    }
+    .plan-card-vip2{
+        margin: 30%;
+        padding: 20px;
+        max-width: 400px;
+        position: relative;
+        left: -3%;
+        width: 85%;
+    }
+    .footer{
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+            padding: 20px; 
+    }
+    
+}
 
 @media  (max-width: 365px){
     #hamburger {
@@ -761,19 +834,7 @@ body {
        display: flex;
      
   }
-  .text1-header h1{
-      font-size: 1.5rem;
-    
-  }
-  .whychooseUs-section {
-    grid-template-columns: repeat(1, minmax(250px, 1fr));
-    padding: 10px;
-}
-.whychooseUs-section div h3 {
-    font-weight: 400;
-    font-size: small;
-    
-}
+
 .vid-section{
     display: flex;
     margin-bottom: 10%; 
@@ -793,16 +854,7 @@ body {
     padding-left: 0px; 
     margin: 8px;   
 }
-.whychooseUs-section div h1{
-    font-size: 1rem;
-}
-.whychooseUs-section div:nth-child(9) { 
-    max-width: 500px;
-    width: 100%;
-    max-height: 400px;
-    position: relative;
-    bottom: 0%;
-   }
+
   .logo {
       width: 2.5rem; 
       height: 2.5rem;

@@ -542,6 +542,12 @@ text-decoration: none;
         top: 0.1rem;
        
     }
+    .hamburger img{
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        top: 10px;
+    }
     .help-center-icons {
         flex-direction: row;
         gap: 15px;
@@ -585,7 +591,10 @@ text-decoration: none;
         top: 0.1rem;
        
     }
-
+    .hamburger img{
+        width: 2rem;
+        height: 4rem; 
+    }
     
     .menu{
         display: none;
@@ -634,7 +643,11 @@ text-decoration: none;
          bottom: 0rem;
          display: flex;
     }
-
+    .hamburger img{
+        width: 2rem;
+        height: 3rem;
+        position: relative;
+    }
     
     .logo {
         width: 2.5rem; 
@@ -739,6 +752,12 @@ text-decoration: none;
        display: flex;
      
   }
+  .hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
+    bottom: 5px;
+}
   
 .logo {
     width: 2.5rem; 
@@ -839,6 +858,12 @@ text-decoration: none;
        display: flex;
      
   }
+  .hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
+    bottom: 6px;
+}
   
   .logo {
     width: 2.5rem; 

@@ -391,6 +391,13 @@ text-decoration: none;
         margin: 2%;
        
     }
+    .hamburger img{
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        bottom: 25px;
+        
+    }
     /* body contents start here */
     .community-banner{
         width: 100%;
@@ -453,6 +460,12 @@ text-decoration: none;
         margin: 2%;
        
     }
+    .hamburger img{
+        width: 2rem;
+        height: 4rem; 
+        bottom: 25px;
+        position: relative;
+    }
     .menu{
         display: none;
     }
@@ -506,10 +519,12 @@ text-decoration: none;
         display: flex;
          
       }
-      .hamburger img {
-        width: 25px;
-        height: 25px;
-      }
+      .hamburger img{
+        width: 2rem;
+        height: 3rem;
+        position: relative;
+        bottom: 15px;
+    }
     
     .logo {
         width: 2.5rem; 
@@ -584,10 +599,12 @@ text-decoration: none;
     display: flex;
      
   }
-  .hamburger img {
-    width: 25px;
-    height: 25px;
-  }
+  .hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
+    bottom: 15px;
+}
   
 .logo {
     width: 2.5rem; 
@@ -663,7 +680,12 @@ text-decoration: none;
        display: flex;
      
   }
-  
+  .hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
+    bottom: 15px;
+}
   .logo {
     width: 2.5rem; 
     height: 2.5rem;

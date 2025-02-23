@@ -803,6 +803,13 @@ text-decoration: none;
         position: relative;
         top: 10px;
     }
+    #hamburger{
+        bottom: -1.5rem; 
+        right: 1rem;
+        font-size: 3rem;
+        display: flex;
+        top: 0.1rem; 
+    }
     #google_translate_element{
         margin-left: 2rem;
     }
@@ -876,14 +883,6 @@ text-decoration: none;
     position: relative;
     bottom: 1%;
 }
-    #hamburger{
-        bottom: -1.5rem; 
-        right: 1rem;
-        font-size: 3rem;
-        display: flex;
-        top: 0.1rem;
-       
-    }
     .intro-section {
           margin-top: 0%;
     }
@@ -910,8 +909,8 @@ text-decoration: none;
        
     }
     .hamburger img{
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 4rem; 
     }
     .vid-section{
         display: flex;
@@ -1044,12 +1043,6 @@ text-decoration: none;
     margin-top: 0%;
     padding-left: 0%;
      
-}
-.hamburger img{
-    width: 2rem;
-    height: 4rem;
-    position: relative;
-   
 }
 .learn-more-btn3{
   
@@ -1355,6 +1348,11 @@ text-decoration: none;
      display: flex;
    
 }
+.hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
+}
 .text1-header h1{
     font-size: 1.5rem;
   
@@ -1526,9 +1524,6 @@ text-decoration: none;
     bottom: 0%;
    }
 }
-
-
-
 
 @media  (max-width: 365px){
     #hamburger {
@@ -1715,6 +1710,4 @@ text-decoration: none;
 .reviews-section p{
     font-size: 11px;
 }
-
-
-  }
+}

@@ -654,6 +654,49 @@ body {
     transform: scale(0.8);
     animation: zoomIn 3s ease-out forwards;
 }
+.footer{
+    background-color: #32404d;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+    padding: 40px;
+    margin-top: 5%;
+    
+}
+.footer-section ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+.footer-section ul li {
+    display: flex;
+    gap: 10px;
+  }
+.footer-section h3 {
+    position: relative;
+    left: 40px;
+}
+.footer-section.payment {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-section.payment h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section.payment img {
+    width: 50px; 
+    height: auto;
+    margin: 5px 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-section.payment img:hover {
+    transform: scale(1.1); 
+}
 
 @media screen and (max-width: 768px) {
     .comparison-table {

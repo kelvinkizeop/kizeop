@@ -287,19 +287,10 @@ body {
             transition: transform 0.3s ease-in-out;
         }
           .dots {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 3%;
+            display: none;
+            
           }
-          .dot {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s;
-          }
+     
         .plan-card {
             background: white;
             padding: 20px;
@@ -320,7 +311,21 @@ body {
             border-top: 3px solid #32404D;
             position: relative;
             top: 45px;
+            
         }
+        .plan-card-vip2{
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            max-width: 400px;
+            text-align: center;
+            border: 3px solid #32404D;
+            border-top: 3px solid #32404D;
+            position: relative;
+            top: 45px;
+        }
+
+       
         .plan-card h3,p{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             text-align: start;
@@ -334,6 +339,12 @@ body {
             bottom: 10px;
             position: relative;
 
+        }
+        .plan-card-vip2{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: start;
+            bottom: 10px;
+            position: relative;
         }
         .plan-header {
             background-color: white;
@@ -820,6 +831,7 @@ body {
     width: 2rem;
     height: 3rem;
     position: relative;
+    bottom: 6px;
 }
 .sidebar-submenu li a {
     font-size: 1rem;  
@@ -838,8 +850,9 @@ body {
   .all-plans-container{
     display: grid;
     grid-template-columns: repeat(3, minmax(400px, 1fr));
-    gap: 0px;
+    gap: 0%;
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
   .dots {
     display: flex;
@@ -858,20 +871,32 @@ body {
 .plan-card {
     padding: 20px;
     max-width: 400px;
-    margin: 20px;
+    margin: 70px;
+    width: 80%;
 }
 .plan-card-vip{
-    margin: 20px;
+    margin: 40px;
     padding: 20px;
     max-width: 400px;
+    position: relative;
+    right: 10%;
+    width: 80%;
 
 }
+.plan-card-vip2{
+    margin: 50px;
+    padding: 20px;
+    max-width: 400px;
+    position: relative;
+    left: 22%;
+    width: 80%;
+}
+
 
 .footer{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 20px; 
     margin-top: 5%;
 }
- 
 
 }

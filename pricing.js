@@ -98,33 +98,42 @@ document.querySelectorAll('.scroll-zoom').forEach(element => {
 });
 
 
-//reviews toggle
+function isMobileView() {
+    return window.innerWidth < 1024; // Adjust breakpoint as needed
+  }
+  
+  function enableCarousel() {
+    if (isMobileView()) {
 const carousel = document.querySelector(".all-plans-container");
 const dots = document.querySelectorAll(".dot");
+const cards = document.querySelectorAll(".plan-card, .plan-card-vip,plan-card-vip2");
+let currentIndex = 2; // Start from the center plan
 
-let currentIndex = 0;
-
-// Update carousel and active dot
+// Function to update carousel
 function updateCarousel(index) {
-  const cardWidth = carousel.querySelector(".plan-card-vip").offsetWidth;
-  carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+  const cardWidth = cards[0].offsetWidth; 
+  const offset = index * cardWidth;
+  carousel.style.transform = `translateX(calc(50% - ${offset}px))`;
 
+  // Update active dot
   dots.forEach((dot, idx) => {
     dot.classList.toggle("active", idx === index);
   });
 }
 
-// Add event listeners to dots
-dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      updateCarousel(currentIndex);
-    });
-  });
-  
-// Swipe functionality for touch devices
-let startX = 0;
+// Initialize correct position
+updateCarousel(currentIndex);
 
+// Dot navigation
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    currentIndex = index;
+    updateCarousel(currentIndex);
+  });
+});
+
+// Swipe functionality
+let startX = 0;
 carousel.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
 });
@@ -140,4 +149,14 @@ carousel.addEventListener("touchend", (e) => {
   }
 
   updateCarousel(currentIndex);
+});
+}
+}
+
+// Run on load
+enableCarousel();
+
+// Re-check when window resizes
+window.addEventListener("resize", () => {
+  enableCarousel();
 });

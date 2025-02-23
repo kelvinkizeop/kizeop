@@ -38,10 +38,6 @@ document.querySelectorAll(".sidebar-dropdown").forEach(item => {
 });
 
 
-document.getElementById("compare-plans-btn").addEventListener("click", function() {
-    document.getElementById("compare-plans-section").scrollIntoView({ behavior: "smooth" });
-});
-
 
 // Open Modal
 function openModal() {
@@ -160,3 +156,36 @@ enableCarousel();
 window.addEventListener("resize", () => {
   enableCarousel();
 });
+
+
+//for pop up message
+function openPopup() {
+    const popup = document.getElementById("installmentPopup");
+    popup.style.display = "block";
+
+    // Apply fade-in effect
+    setTimeout(() => {
+        popup.classList.add("show");
+    }, 1000);
+
+    // Hide the popup automatically after 30 seconds
+    setTimeout(closePopup, 30 * 1000);
+}
+
+function closePopup() {
+    const popup = document.getElementById("installmentPopup");
+
+    // Fade out effect before hiding
+    popup.classList.remove("show");
+
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 1000); 
+}
+
+// Shows popup every 3 minutes (it will appear, stay for 30 seconds, then disappear)
+setInterval(openPopup, 3 * 60 * 1000);
+
+// First popup appears after 3 seconds
+setTimeout(openPopup, 3000);
+

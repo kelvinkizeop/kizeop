@@ -736,7 +736,53 @@ text-decoration: none;
 .footer-section.payment img:hover {
     transform: scale(1.1); 
 }
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #007BFF; 
+    color: white; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.popup.show {
+    display: block;
+    opacity: 1;
+}
+.popup-content {
+    position: relative;
+}
 
+.close-btn {
+    position: absolute;
+    top: -35px;
+    right: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218188;
+}
 @media screen and (max-width: 768px) {
     .comparison-table {
         font-size: 14px;

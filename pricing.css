@@ -910,6 +910,286 @@ text-decoration: none;
     
 }
 
+
+@media  (max-width: 650px){
+    #hamburger {
+        font-size: 2rem; 
+        right: 1rem;
+        top: 0.1rem;
+         bottom: 0rem;
+         display: flex;
+    }
+    .logo {
+        width: 2.5rem; 
+        height: 2.5rem;
+    }
+    .site-name{
+        font-size: 1.2rem;
+        top: -0.8rem;
+        margin-left: 2rem;
+       
+    }
+    .sidebar {
+        text-align: start;
+        transform: translateX(-100%);
+        width: 80%;
+        height: 200vh;
+        display: block;
+    }
+  
+    .sidebar-submenu li a {
+        font-size: 1.1rem;  
+      }
+       .sidebar ul div a{
+        font-size: 1.2rem;
+      }
+       .sidebar-dropdown .material-symbols-outlined {
+        font-size: 30px;
+      }
+    
+      .sidebar-submenu .material-symbols-outlined {
+        font-size: 20px;
+      }
+    .hamburger img{
+        width: 2rem;
+        height: 3rem;
+        position: relative;
+        bottom: 5px;
+    }
+    #google_translate_element{
+     display: block;
+    }
+    .vid-section{
+        display: flex;
+        margin-bottom: 10%; 
+        flex-direction: column;
+        gap: 20px;
+    } 
+    .video{
+        flex: 1;
+        display: flex;
+        margin: 8px;
+        position: relative;
+        left: 0%;
+        margin-top: 15%;    
+    }
+    .vid-img{
+        flex: 1;
+        padding-left: 0px; 
+        margin: 8px;   
+    }
+    .all-plans-container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(400px, 1fr));
+        gap: 0%;
+        transition: transform 0.3s ease-in-out;
+        overflow: hidden;
+    }
+      .dots {
+        display: none;
+        justify-content: center;
+        margin-bottom: 3%;
+      }
+      .dots-word{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2%;
+      }
+      .dots-word{
+        text-align: center;
+        font-size: 1.1rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+    .plan-card {
+        padding: 20px;
+        max-width: 400px;
+        margin: 70px;
+        width: 80%;
+    }
+    .plan-card-vip{
+        margin: 40px;
+        padding: 20px;
+        max-width: 400px;
+        position: relative;
+        right: 10%;
+        width: 80%;
+    
+    }
+    .plan-card-vip2{
+        margin: 50px;
+        padding: 20px;
+        max-width: 400px;
+        position: relative;
+        left: 22%;
+        width: 80%;
+    }    
+    .menu{
+        display: none;
+    }
+    .intro-section {
+        flex-direction:column;
+          margin-top: 0%;
+    }
+    .intro-video video {
+        width: 100%;
+        height: auto;
+    }
+    .footer{
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+        padding: 20px; 
+    }
+    
+  }
+
+
+
+  @media  (max-width: 535px){
+  #hamburger {
+    font-size: 1.5rem; 
+    top: 0.3rem;
+    right: 1rem;
+     bottom: 0rem;
+     display: flex;
+   
+}
+.hamburger img{
+    width: 2rem;
+    height: 3rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.logo {
+    width: 2.5rem; 
+    height: 2.5rem;
+}
+.site-name{
+    font-size: 1rem;
+    top: -0.7rem;
+    margin-left: 2rem;
+   
+}
+#google_translate_element{
+    display: none;
+    
+}
+.menu{
+    display: none;
+}
+.vid-section{
+    display: flex;
+    margin-bottom: 10%; 
+    flex-direction: column;
+    gap: 20px;
+} 
+.video{
+    flex: 1;
+    display: flex;
+    margin: 8px;
+    position: relative;
+    left: 0%;
+    margin-top: 15%;    
+}
+.vid-img{
+    flex: 1;
+    padding-left: 0px; 
+    margin: 8px;   
+}
+.all-plans-container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    gap: 0%;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+  .dots {
+    display: none;
+    justify-content: center;
+    margin-bottom: 3%;
+  }
+  .dots-word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+  .dots-word{
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+.plan-card {
+    padding: 20px;
+    max-width: 400px;
+    margin: 70px;
+    width: 80%;
+}
+.plan-card-vip{
+    margin: 40px;
+    padding: 20px;
+    max-width: 400px;
+    position: relative;
+    right: 10%;
+    width: 80%;
+
+}
+.plan-card-vip2{
+    margin: 50px;
+    padding: 20px;
+    max-width: 400px;
+    position: relative;
+    left: 22%;
+    width: 80%;
+}
+.sidebar {
+    text-align: start;
+    transform: translateX(-100%);
+    width: 80%;
+    height: 200vh;
+    display: block;
+}
+.sidebar-submenu li a {
+    font-size: 1.1rem;  
+  }
+   .sidebar ul div a{
+    font-size: 1.2rem;
+  }
+   .sidebar-dropdown .material-symbols-outlined {
+    font-size: 25px;
+  }
+
+  .sidebar-submenu .material-symbols-outlined {
+    font-size: 15px;
+  }
+
+.footer{
+    grid-template-columns: repeat(1, minmax(200px, 1fr)); 
+    padding: 20px; 
+}
+
+
+}
+
+
 @media  (max-width: 365px){
     #hamburger {
       font-size: 1.5rem; 

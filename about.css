@@ -645,7 +645,19 @@ text-decoration: none;
         height: 200vh;
         display: block;
     }
+    .sidebar-submenu li a {
+        font-size: 1.2rem;  
+    }
+    .sidebar ul div a{
+        font-size: 1.5rem;
+    }
+    .sidebar-dropdown .material-symbols-outlined {
+        font-size: 30px;
+    }
     
+    .sidebar-submenu .material-symbols-outlined {
+        font-size: 20px;
+    }
     #hamburger{
         bottom: -1.5rem; 
         right: 1rem;
@@ -737,6 +749,19 @@ text-decoration: none;
         height: 200vh;
         display: block;
     }
+    .sidebar-submenu li a {
+        font-size: 1.1rem;  
+      }
+       .sidebar ul div a{
+        font-size: 1.2rem;
+      }
+       .sidebar-dropdown .material-symbols-outlined {
+        font-size: 30px;
+      }
+    
+      .sidebar-submenu .material-symbols-outlined {
+        font-size: 20px;
+      }
     .about-us-section img{
         max-width: 90%;
     }
@@ -862,13 +887,7 @@ text-decoration: none;
     .about-text{
         font-size: 1.5rem;
       }
-    .sidebar {
-        text-align: start;
-        transform: translateX(-100%);
-        width: 50%;
-        height: 200vh;
-        display: block;
-    }
+
     .menu{
         display: none;
     }
@@ -880,6 +899,19 @@ text-decoration: none;
         height: 200vh;
         display: block;
     }
+    .sidebar-submenu li a {
+        font-size: 1.1rem;  
+      }
+       .sidebar ul div a{
+        font-size: 1.2rem;
+      }
+       .sidebar-dropdown .material-symbols-outlined {
+        font-size: 30px;
+      }
+    
+      .sidebar-submenu .material-symbols-outlined {
+        font-size: 20px;
+      }
     .section3{
     display: flex;
     flex-direction: column;
@@ -995,11 +1027,18 @@ text-decoration: none;
     display: block;
 }
 .sidebar-submenu li a {
-    font-size: 12px;  
-}
-.sidebar ul div a{
-    font-size: 13px;
-}
+    font-size: 1.1rem;  
+  }
+   .sidebar ul div a{
+    font-size: 1.2rem;
+  }
+   .sidebar-dropdown .material-symbols-outlined {
+    font-size: 25px;
+  }
+
+  .sidebar-submenu .material-symbols-outlined {
+    font-size: 15px;
+  }
 .about-text{
     font-size: 1.2rem;
   }
@@ -1125,11 +1164,18 @@ text-decoration: none;
   display: block;
 }
 .sidebar-submenu li a {
-  font-size: 12px;  
-}
-.sidebar ul div a{
-  font-size: 12px;
-}
+    font-size: 1rem;  
+  }
+   .sidebar ul div a{
+    font-size: 1rem;
+  }
+   .sidebar-dropdown .material-symbols-outlined {
+    font-size: 20px;
+  }
+
+  .sidebar-submenu .material-symbols-outlined {
+    font-size: 15px;
+  }
 .about-text{
     font-size: 1rem;
   }

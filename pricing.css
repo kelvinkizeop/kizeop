@@ -510,6 +510,12 @@ body {
     font-size: 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#compare-plans-section p{
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .comparison-table {
     width: 100%;
     max-width: 900px;
@@ -676,6 +682,30 @@ body {
 .installment-info p {
     color: #555;
     font-size: 1.3rem;
+}
+.installment-info ul li{
+    color: #555;
+    font-size: 1.3rem;
+    text-align: start;
+}
+.terms-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-content: center;
+}
+
+.terms-info h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.terms-info p {
+    color: #555;
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 .installment-btn {

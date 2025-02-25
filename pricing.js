@@ -189,3 +189,44 @@ setInterval(openPopup, 3 * 60 * 1000);
 // First popup appears after 3 seconds
 setTimeout(openPopup, 3000);
 
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const criteriaLinks = document.querySelectorAll(".see-criteria");
+    const popupOverlay = document.getElementById("criteriaPopup");
+    const popupTitle = document.getElementById("popupTitle");
+    const popupRequirements = document.getElementById("popupRequirements");
+    const closePopup = document.querySelector(".close-popup");
+
+    criteriaLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Get job details
+            const jobTitle = this.getAttribute("data-title");
+            const jobRequirements = this.getAttribute("data-requirements");
+
+            // Set popup content
+            popupTitle.textContent = jobTitle;
+            popupRequirements.innerHTML = jobRequirements;
+
+            // Show popup with smooth animation
+            popupOverlay.classList.add("active");
+        });
+    });
+
+    // Close popup smoothly when "X" is clicked
+    closePopup.addEventListener("click", function () {
+        popupOverlay.classList.remove("active");
+    });
+
+    // Close popup when clicking outside the content box
+    popupOverlay.addEventListener("click", function (event) {
+        if (event.target === popupOverlay) {
+            popupOverlay.classList.remove("active");
+        }
+    });
+});

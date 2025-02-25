@@ -842,6 +842,141 @@ button {
 button:hover {
     background-color: #218188;
 }
+
+.career-opportunities {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.category h2 {
+    grid-column: span 3; 
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.category h3 {
+    grid-column: span 3; 
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.category p {
+    grid-column: span 3; 
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.position-card {
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+}
+
+.apply-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+
+.see-criteria {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.see-criteria:hover {
+    background-color: #007bff;
+    color: white;
+}
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;  /* Start hidden */
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);  /* Start slightly above */
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    opacity: 0;
+}
+
+/* When popup is active */
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: black;
+}
+
+.close-popup:hover {
+    color: red;
+}
+
 @media screen and (max-width: 768px) {
     .comparison-table {
         font-size: 14px;
@@ -1016,6 +1151,8 @@ button:hover {
         left: -3%;
         width: 85%;
     }
+   
+   
     .footer{
         grid-template-columns: repeat(2, minmax(250px, 1fr)); 
             padding: 20px; 
@@ -1032,6 +1169,7 @@ button:hover {
          bottom: 0rem;
          display: flex;
     }
+   
     .logo {
         width: 2.5rem; 
         height: 2.5rem;
@@ -1160,6 +1298,26 @@ button:hover {
     .intro-video video {
         width: 100%;
         height: auto;
+    }
+   
+    .category {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .position-card {
+        max-width: 300px;
+    }
+    .category h2 {
+        grid-column: span 2; 
+      
+    }
+    .category h3 {
+        grid-column: span 2; 
+     
+    }
+    .category p {
+        grid-column: span 2; 
+   
     }
     .footer{
         grid-template-columns: repeat(2, minmax(200px, 1fr)); 
@@ -1301,7 +1459,26 @@ button:hover {
   .sidebar-submenu .material-symbols-outlined {
     font-size: 15px;
   }
+  .category {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10%;
+}
 
+.position-card {
+    max-width: 500px;
+}
+.category h2 {
+    grid-column: span 1; 
+  
+}
+.category h3 {
+    grid-column: span 1; 
+ 
+}
+.category p {
+    grid-column: span 1; 
+
+}
 .footer{
     grid-template-columns: repeat(1, minmax(200px, 1fr)); 
     padding: 20px; 
@@ -1445,7 +1622,26 @@ button:hover {
     width: 80%;
 }
 
+.category {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0%;
+}
 
+.position-card {
+    max-width: 400px;
+}
+.category h2 {
+    grid-column: span 1; 
+  
+}
+.category h3 {
+    grid-column: span 1; 
+ 
+}
+.category p {
+    grid-column: span 1; 
+
+}
 .footer{
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 20px; 

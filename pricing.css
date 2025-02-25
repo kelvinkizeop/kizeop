@@ -752,6 +752,48 @@ body {
 .installment-btn:hover {
     background-color: #0056b3;
 }
+
+/* Popup Overlay */
+.popup-overlays {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;  /* Start hidden */
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Popup Content */
+.popup-contents {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);  /* Start slightly above */
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    opacity: 0;
+}
+/* When popup is active */
+.popup-overlays.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-overlays.active .popup-contents {
+    transform: translateY(0);
+    opacity: 1;
+}
 .footer{
     background-color: #32404d;
     color: #fff;
@@ -761,6 +803,22 @@ body {
     margin-top: 5%;
     
 }
+
+/* Close Button */
+.close-popups {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: black;
+}
+
+.close-popups:hover {
+    color: red;
+}
+
+
 .footer-section ul li a {
 color: #fff;
 text-decoration: none;

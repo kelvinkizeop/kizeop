@@ -188,3 +188,44 @@ setInterval(openPopup, 3 * 60 * 1000);
 
 // First popup appears after 3 seconds
 setTimeout(openPopup, 3000);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const criteriaLinks = document.querySelectorAll(".see-criteria");
+    const popupOverlay = document.getElementById("criteriaPopup");
+    const popupTitle = document.getElementById("popupTitle");
+    const popupRequirements = document.getElementById("popupRequirements");
+    const closePopup = document.querySelector(".close-popups");
+
+    criteriaLinks.forEach(link => {
+        link.addEventListener("click", openPopup);
+        link.addEventListener("touchstart", openPopup); // Fix for mobile
+    });
+
+    function openPopup(event) {
+        event.preventDefault();
+        const jobTitle = this.getAttribute("data-title");
+        const jobRequirements = this.getAttribute("data-requirements");
+
+        popupTitle.textContent = jobTitle;
+        popupRequirements.innerHTML = jobRequirements;
+
+        popupOverlay.classList.add("active");
+    }
+
+    closePopup.addEventListener("click", function () {
+        popupOverlay.classList.remove("active");
+    });
+
+    popupOverlay.addEventListener("click", function (event) {
+        if (event.target === popupOverlay) {
+            popupOverlay.classList.remove("active");
+        }
+    });
+});
+
+
+
+
+
+

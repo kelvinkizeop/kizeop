@@ -99,18 +99,6 @@ document.querySelectorAll('.scroll-fade').forEach(element => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //sidebar drop down toggle
 document.querySelectorAll(".sidebar-dropdown").forEach(item => {
     item.addEventListener("click", function(event) {

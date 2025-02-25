@@ -794,16 +794,6 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
-.footer{
-    background-color: #32404d;
-    color: #fff;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
-    padding: 40px;
-    margin-top: 5%;
-    
-}
-
 /* Close Button */
 .close-popups {
     position: absolute;
@@ -818,6 +808,16 @@ body {
     color: red;
 }
 
+
+.footer{
+    background-color: #32404d;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+    padding: 40px;
+    margin-top: 5%;
+    
+}
 
 .footer-section ul li a {
 color: #fff;

@@ -1147,13 +1147,6 @@ text-decoration: none;
         padding-left: 0px; 
          
     }
-    .sidebar {
-        text-align: start;
-        transform: translateX(-100%);
-        width: 50%;
-        height: 200vh;
-        display: block;
-    }
     .menu{
         display: none;
     }

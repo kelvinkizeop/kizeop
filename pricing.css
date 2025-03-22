@@ -173,7 +173,7 @@ body {
     background-color: #6E4E37;
 }
 .sidebar.show {
-    transform: translateX(0); /* ShowS menu */
+    transform: translateX(0); 
   }
   .sidebar-submenu {
     list-style: none;
@@ -282,18 +282,11 @@ body {
         }
         .all-plans-container{
             display: grid;
-            grid-template-columns: repeat(3, minmax(400px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(4, minmax(400px, 1fr));
+            gap: 15px;
             transition: transform 0.3s ease-in-out;
         }
-          .dots {
-            display: none;
-            
-          }
-          .dots-word{
-            display: none;
-          
-          }
+    
         .plan-card {
             background: white;
             padding: 20px;
@@ -327,7 +320,16 @@ body {
             position: relative;
             top: 45px;
         }
-
+        .plan-card-vip3{
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            max-width: 400px;
+            text-align: center;
+            border: 3px solid #32404D;
+            border-top: 50px solid #32404D;
+           
+        }
        
         .plan-card h3,p{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -348,6 +350,13 @@ body {
             text-align: start;
             bottom: 10px;
             position: relative;
+        }
+        .plan-card-vip3 h3,p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: start;
+            bottom: 20px;
+            position: relative;
+
         }
         .plan-header {
             background-color: white;
@@ -765,12 +774,11 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    opacity: 0;  /* Start hidden */
+    opacity: 0; 
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* Popup Content */
 .popup-contents {
     background: white;
     padding: 20px;
@@ -779,12 +787,13 @@ body {
     width: 80%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-20px);  /* Start slightly above */
+    transform: translateY(-20px); 
     transition: transform 0.3s ease-in-out;
     position: relative;
     opacity: 0;
 }
-/* When popup is active */
+
+
 .popup-overlays.active {
     opacity: 1;
     visibility: visible;
@@ -960,7 +969,10 @@ button:hover {
         position: relative;
         left: 5%;   
     }
-   
+    .all-plans-container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
     .sidebar {
         text-align: start;
         transform: translateX(-100%);
@@ -1036,6 +1048,11 @@ button:hover {
       .sidebar-submenu .material-symbols-outlined {
         font-size: 20px;
       }
+      .all-plans-container{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
+        gap: 30px;
+    }
     .vid-section{
         display: flex;
         margin-bottom: 5%; 
@@ -1051,29 +1068,6 @@ button:hover {
         flex: 1;
         padding-left: 0px; 
         margin: 8px;   
-    }
-    .plan-card {
-        padding: 20px;
-        max-width: 400px;
-        margin: 50px;
-        width: 85%;
-    }
-    .plan-card-vip{
-        margin: 30%;
-        padding: 20px;
-        max-width: 400px;
-        position: relative;
-        right: 30%;
-        width: 85%;
-    
-    }
-    .plan-card-vip2{
-        margin: 30%;
-        padding: 20px;
-        max-width: 400px;
-        position: relative;
-        left: -3%;
-        width: 85%;
     }
    
    
@@ -1159,59 +1153,11 @@ button:hover {
     }
     .all-plans-container{
         display: grid;
-        grid-template-columns: repeat(3, minmax(400px, 1fr));
-        gap: 0%;
-        transition: transform 0.3s ease-in-out;
-        overflow: hidden;
+        grid-template-columns: repeat(1, minmax(500px, 1fr));
     }
-      .dots {
-        display: none;
-        justify-content: center;
-        margin-bottom: 3%;
-      }
-      .dots-word{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 2%;
-      }
-      .dots-word{
-        text-align: center;
-        font-size: 1.1rem;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      }
-      .dot {
-        width: 10px;
-        height: 10px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-    .plan-card {
-        padding: 20px;
-        max-width: 400px;
-        margin: 70px;
-        width: 80%;
+    .plan-card{
+        margin-top: 20%;
     }
-    .plan-card-vip{
-        margin: 40px;
-        padding: 20px;
-        max-width: 400px;
-        position: relative;
-        right: 10%;
-        width: 80%;
-    
-    }
-    .plan-card-vip2{
-        margin: 50px;
-        padding: 20px;
-        max-width: 400px;
-        position: relative;
-        left: 22%;
-        width: 80%;
-    }    
     .menu{
         display: none;
     }
@@ -1292,59 +1238,10 @@ button:hover {
 }
 .all-plans-container{
     display: grid;
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
-    gap: 0%;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+    grid-template-columns: repeat(1, minmax(400px, 1fr));
+    gap: 10px;
 }
-  .dots {
-    display: none;
-    justify-content: center;
-    margin-bottom: 3%;
-  }
-  .dots-word{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2%;
-  }
-  .dots-word{
-    text-align: center;
-    font-size: 1.1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-.plan-card {
-    padding: 20px;
-    max-width: 400px;
-    margin: 70px;
-    width: 80%;
-}
-.plan-card-vip{
-    margin: 40px;
-    padding: 20px;
-    max-width: 400px;
-    position: relative;
-    right: 10%;
-    width: 80%;
 
-}
-.plan-card-vip2{
-    margin: 50px;
-    padding: 20px;
-    max-width: 400px;
-    position: relative;
-    left: 22%;
-    width: 80%;
-}
 .sidebar {
     text-align: start;
     transform: translateX(-100%);
@@ -1455,58 +1352,8 @@ button:hover {
 
   .all-plans-container{
     display: grid;
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
-    gap: 0%;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
-}
-  .dots {
-    display: none;
-    justify-content: center;
-    margin-bottom: 3%;
-  }
-  .dots-word{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2%;
-  }
-  .dots-word{
-    text-align: center;
-    font-size: 1.1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-.plan-card {
-    padding: 20px;
-    max-width: 400px;
-    margin: 70px;
-    width: 80%;
-}
-.plan-card-vip{
-    margin: 40px;
-    padding: 20px;
-    max-width: 400px;
-    position: relative;
-    right: 10%;
-    width: 80%;
-
-}
-.plan-card-vip2{
-    margin: 50px;
-    padding: 20px;
-    max-width: 400px;
-    position: relative;
-    left: 22%;
-    width: 80%;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    gap: 10px;
 }
 
 

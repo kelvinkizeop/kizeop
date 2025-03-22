@@ -76,6 +76,7 @@ function eraseText() {
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeText, 500);
 });
+
 //for scroll effect when in viewpoint
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -150,31 +151,4 @@ carousel.addEventListener("touchend", (e) => {
 
   updateCarousel(currentIndex);
 });
-// Automatic carousel cycling every 3 seconds (3000ms)
-setInterval(() => {
-    if (currentIndex < dots.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateCarousel(currentIndex);
-  }, 3000);
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    const postButtons = document.querySelectorAll("button");
 
-    postButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const textarea = this.previousElementSibling;
-            if (textarea.value.trim() !== "") {
-                const newPost = document.createElement("p");
-                newPost.innerHTML = `<strong>You:</strong> ${textarea.value}`;
-                textarea.value = "";
-                
-                const parentSection = this.closest(".forum-section");
-                const postContainer = parentSection.querySelector(".user-posts") || parentSection.querySelector(".admin-posts");
-                postContainer.appendChild(newPost);
-            }
-        });
-    });
-});

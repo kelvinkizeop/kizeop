@@ -94,60 +94,6 @@ document.querySelectorAll('.scroll-zoom').forEach(element => {
 });
 
 
-function isMobileView() {
-    return window.innerWidth < 1024; // Adjust breakpoint as needed
-  }
-  
-  function enableCarousel() {
-    if (isMobileView()) {
-const carousel = document.querySelector(".all-plans-container");
-const dots = document.querySelectorAll(".dot");
-const cards = document.querySelectorAll(".plan-card, .plan-card-vip,plan-card-vip2");
-let currentIndex = 2; // Start from the center plan
-
-// Function to update carousel
-function updateCarousel(index) {
-  const cardWidth = cards[0].offsetWidth; 
-  const offset = index * cardWidth;
-  carousel.style.transform = `translateX(calc(50% - ${offset}px))`;
-
-  // Update active dot
-  dots.forEach((dot, idx) => {
-    dot.classList.toggle("active", idx === index);
-  });
-}
-
-// Initialize correct position
-updateCarousel(currentIndex);
-
-// Dot navigation
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    currentIndex = index;
-    updateCarousel(currentIndex);
-  });
-});
-
-// Swipe functionality
-let startX = 0;
-carousel.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-carousel.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = endX - startX;
-
-  if (diff > 50 && currentIndex > 0) {
-    currentIndex--; // Swipe right
-  } else if (diff < -50 && currentIndex < dots.length - 1) {
-    currentIndex++; // Swipe left
-  }
-
-  updateCarousel(currentIndex);
-});
-}
-}
 
 // Run on load
 enableCarousel();
@@ -158,7 +104,7 @@ window.addEventListener("resize", () => {
 });
 
 
-//for pop up message
+//for pop up message alert
 function openPopup() {
     const popup = document.getElementById("installmentPopup");
     popup.style.display = "block";

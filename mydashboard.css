@@ -1,0 +1,2093 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+    font-family: "Kanit", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    zoom: 95%;
+   
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f8f9fa;
+    background-size: cover;
+ 
+    
+  }
+.header{
+    background:white;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin: 0px;
+    margin-left: 20%;
+    padding: 5px 20px;
+    position: fixed;
+    z-index: 4000;
+    
+}
+
+#hamburger{
+    position: absolute;
+    bottom: -2rem;
+    top: 0.5rem; 
+    color:  #fff;
+    display: none;
+    right: 1rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.hamburger img{
+    position: relative;
+    bottom: 1%;
+}
+.site-name{
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #32404D;
+    position: relative;
+    top: -1rem;
+    font-family: "Kanit", serif;
+    display: none;
+
+}
+
+.cart {
+    position: fixed;  
+    top: 15px;       
+    right: 1rem;      
+    cursor: pointer;
+    z-index: 1000;   
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cart img {
+    width: 50%;
+    height: auto;
+    background-color: #e3e3e3;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.info{
+    position: relative;
+    left: 3rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.home a{
+    font-size: 1.2rem;
+    background-color: #e3e3e3;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top: 1.2rem;
+    left: 4rem;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.info a{
+    font-size: 1rem;
+    background-color:  #007bff;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top: 1.2rem;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.usersname h1{
+    font-size: 1.2rem;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    top: 0.1rem;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+.sidebar {
+    width: 20%;
+    background-color: #e3e3e3;
+    color: #007bff;
+    height: 110vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2000;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.sidebar h2 {
+     font-size: 1.5rem;
+     text-align: center;
+     position: relative;
+     top: -2rem;
+     background-color: #a2bcd8;
+     color: white;
+     padding: 10px 10px;
+}
+.sidebar h3{
+    font-size: 1.2rem;
+    position: relative;
+    top: -1rem;
+    color: #007bff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    gap: 10px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    color: #6E4E37;
+    font-size: 1rem;
+    position: relative;
+    top: -1.4rem;
+}
+
+
+/* Body starts  */
+
+.content-section {
+    margin-left: 350px; 
+    padding: 20px;
+    display: none;
+    margin-top: 5%;
+}
+
+/* Styling general buttons in the page */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+#lastLogin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.welcome{
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    text-align: start;
+    max-width: 350px;
+    max-height: 350px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.location{
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: start;
+    position: relative;
+    left: 65%;
+    bottom: 15rem;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    margin-top: 6%;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.stay-informed{
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: start;
+    position: relative;
+    left: 0%;
+    bottom: 37%;
+    max-width: 400rem;
+    max-height: 300px;
+    width: 100%;
+    margin-top: -16%;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.stay-informed.message{
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.stay-informed input[type="email"] {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.stay-informed input[type="email"]:focus {
+    border-color: #007BFF; 
+    outline: none;
+}
+
+.stay-informed input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stay-informed input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+.user-info{
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    background-color: lightblue;
+    text-align: start;
+    margin-top: 6%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.location { background-color: #aec8e4;  }
+.stay-informed { background-color: #2C65A3; }
+.user-info { background-color:  lightblue;  }
+
+#Support{
+    background-color: #007BFF;
+    position: relative;
+    left: 5%;
+    width: 100%;
+    max-width: 700px;
+    top: 5%;
+    color: #ffff;
+    border-radius: 10px;
+
+}
+#Support form {
+    max-width: 500px;
+    margin-top: 10px;
+   
+}
+
+#Support input, #Support textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#Support button {
+    background-color: bisque;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#Support button:hover {
+    background-color: #0056b3;
+}
+
+
+#UpdateProfile {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    position: relative;
+    left: 3%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 8%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#UpdateProfile h2, #UpdateProfile h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#UpdateProfile label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: start;
+}
+
+
+#UpdateProfile input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+#UpdateProfile button {
+    width: 100%;
+    padding: 14px;
+    background-color:#007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#UpdateProfile button:hover {
+    background-color: #a2bcd8;
+}
+
+
+/* Styling for the change password section */
+#ChangePassword {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    position: relative;
+    left: 3%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 8%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#ChangePassword form {
+    padding: 20px 20px;  
+}
+
+#ChangePassword h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+
+#ChangePassword label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: start;
+}
+
+#ChangePassword input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+#ChangePassword input[type="password"]:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+    outline: none;
+}
+
+#ChangePassword button {
+    width: 100%;
+    padding: 14px;
+    background-color:#007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#ChangePassword button:hover {
+    background-color: #a2bcd8;
+}
+
+/* Styling for success or error messages */
+#ChangePassword,#UpdateProfile,#billing-settings,#WebsitesPricing, #popupForm .message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+
+#Billing{
+    padding: 40px 20px;
+    text-align: center;
+    
+}
+#Billing h2{
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#Billing p{
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.payment-history{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.payment-history th, 
+.payment-history td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.payment-history th {
+    background-color: #007bff;
+    color: white;
+}
+
+.payment-history tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.payment-history td {
+    font-weight: 500;
+}
+
+.invoice-management{
+    padding: 40px 20px;
+    text-align: start;
+}
+
+.invoice-management p {
+    text-align: left !important;
+    width: 100%;
+}
+.invoice-management h3 {
+    text-align: start;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+    /* Billing Settings Section */
+    #billing-settings {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    position: relative;
+    left: 3%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 8%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #billing-settings h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    
+
+    #billing-settings label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #555;
+        text-align: start;
+    }
+
+    #billing-settings input[type="text"],
+    #billing-settings input[type="email"],
+    #billing-settings textarea,
+    #billing-settings select {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0 20px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+
+    #billing-settings input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        background-color:#007BFF;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #billing-settings input[type="submit"]:hover {
+        background-color: #a2bcd8;
+    }
+
+
+    #WebsitesPricing h3 {
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px; 
+}
+
+
+.web-plans-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 2fr));
+    margin: 10px;
+    gap: 40px;
+    margin-top: 3%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center; 
+}
+
+
+#starter, #gaint {
+    padding: 20px 20px;
+    color: white;
+    border-radius: 10px;
+    max-width: 350px;
+    max-height: auto;
+    width: 100%;
+    text-align: start;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+#brand, #webxpress{
+    padding: 20px 20px;
+    color: black;
+    border-radius: 10px;
+    max-width: 350px;
+    max-height: auto;
+    width: 100%;
+    text-align: start;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+#brand:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+#webxpress:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);  
+}
+#starter:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);  
+}
+#gaint:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);  
+}
+#starter {
+    background-color: #32404D;
+    
+}
+
+#brand, #webxpress {
+    background-color: white;
+    
+}
+
+#gaint {
+    background-color: cadetblue;
+}
+.promo-badge {
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 5px;
+    border-radius: 5px;
+    position: relative;
+    top: -30px;
+    left: 3px;
+    font-size: 14px;
+}
+.starter-badge{
+    background-color: floralwhite;
+    color: #007bff;
+    font-weight: bold;
+    padding: 15px 5px;
+    border-radius: 5px;
+    position: relative;
+    top: -40px;
+    left: 3px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.brand-badge{
+    background-color: bisque;
+    color: #007bff;
+    font-weight: bold;
+    padding: 15px 5px;
+    border-radius: 5px;
+    position: relative;
+    top: -40px;
+    left: 3px;
+    text-align: center;
+    font-size: 16px; 
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.popup-content {
+    position: relative;
+}
+#totalPriceDisplay {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+.popup h3 {
+    font-size: 1.5rempx;
+    margin-bottom: 20px;
+    color: #2C3E50;
+    text-align: center;
+}
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#Cart h2{
+    text-align: center;
+    font-size: 1.7rem;
+    right: 7%;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.cart-history{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 16px;
+ }  
+ .cart-history th, 
+ .cart-history td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.cart-history th {
+    background-color: #007bff;
+    color: white;
+}
+
+.cart-history tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cart-history td {
+    font-weight: 500;
+}
+ 
+ 
+#AppsPricing h3{
+    font-size: 1.7rem;
+    text-align: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px; 
+
+}
+
+#AppsPricing p{
+    font-size: 1.2rem;
+    text-align: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Progress Bar Styling */
+.progress-container {
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+    transition: width 0.5s ease-in-out, background-color 0.5s;
+    border-radius: 20px;
+}
+
+/* Onboarding Form Styling */
+#onboarding-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#onboarding-form h3 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#onboarding-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+#onboarding-form input,
+#onboarding-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+#onboarding-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#onboarding-form button {
+    width: 100%;
+    background: green; 
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#onboarding-form button:hover {
+    background: darkgreen;
+}
+
+
+@media (min-width: 981px)and  (max-width: 1300px){
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-left: 0;
+            width: 100%;
+        }
+    
+        .site-name {
+            font-size: 2rem;
+            margin-left: 1rem;
+            text-align: left;
+            display: none;
+        }
+    
+        #hamburger {
+            display: block;
+            font-size: 2.8rem;
+            right: 1.5rem;
+            bottom: 3px;
+            color: black;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+          
+        }
+        .hamburger img{
+            width: 3rem;
+            height: 3rem;
+            bottom: -5px;
+            background-color: #e3e3e3;
+            border-radius: 10px;
+        }
+    
+        .cart {
+            position: relative;
+            right:10%; 
+            top: 2px;
+        }
+    
+        .cart img {
+            width: 45px;
+            height: 45px;
+    
+        }
+    
+        .info a {
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            position: relative;
+            right:25%;
+        }
+        .home a{
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            top: 1px;
+        }
+        .home{
+            position: relative;
+            right:15%; 
+        }
+    
+        .usersname h1 {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    
+        .logo {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    
+        .sidebar {
+            width: 60%;
+            height: 100vh;
+            display: block;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .sidebar.show {
+            transform: translateX(0); 
+        }
+        .content-section {
+            margin-left: 0px; 
+        }
+        .web-plans-box{
+            margin: 20%;
+            gap: 40px;
+            margin-top: 3%;
+
+        }
+        #Cart h2 {
+            right: 5%;
+            margin-top: 5%;
+            margin-bottom: 0%;
+        
+        }
+        .cart-history{
+            margin: 10%;
+            font-size: 1.5rem;
+
+        }
+    }
+    @media (min-width: 920px) and (max-width: 980px){
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-left: 0;
+            width: 100%;
+        }
+    
+        .site-name {
+            font-size: 2rem;
+            margin-left: 1rem;
+            text-align: left;
+            display: none;
+        }
+    
+        #hamburger {
+            display: block;
+            font-size: 2.8rem;
+            right: 1.5rem;
+            bottom: 3px;
+            color: black;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hamburger img{
+            width: 3rem;
+            height: 3rem;
+            bottom: -5px;
+            background-color: #e3e3e3;
+            border-radius: 10px;
+        }
+        #Cart h2 {
+            right: 0%;
+            margin-top: 10%;
+        
+        }
+        .cart-history{
+            margin: 10%;
+
+        }
+        .cart {
+            position: relative;
+            right:10%; 
+            top: 2px;
+        }
+    
+        .cart img {
+            width: 45px;
+            height: 45px;
+    
+        }
+    
+        .info a {
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            position: relative;
+            right:25%;
+            display: none;
+        }
+        .home a{
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            top: 2px;
+        }
+        .home{
+            position: relative;
+            right:15%; 
+        }
+    
+        .usersname h1 {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    
+        .logo {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    
+        .sidebar {
+            width: 60%;
+            height: 100vh;
+            display: block;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .sidebar.show {
+            transform: translateX(0); 
+        }
+        .content-section {
+            margin-left: 0px; 
+        }
+        #WebsitesPricing h3 {
+            font-size: 1.7rem;
+            margin-top: 8%;
+        }
+    
+        .web-plans-box{
+            margin: 20%;
+            gap: 40px;
+            margin-top: 3%;
+
+        }  
+        #UpdateProfile, #ChangePassword,#billing-settings {
+            max-width: 90%;
+            margin-top: 10% !important;
+            padding: 15px;
+        }
+        #Support{
+            left: 0%;
+            max-width: 90%;
+            margin-top: 10% !important;
+            padding: 15px;
+            margin: 5%;
+        }
+
+    }
+    @media (min-width: 651px) and (max-width: 900px){
+        #lastLogin {
+            display: block; 
+            padding: 10px; 
+             
+        }
+        .welcome{
+            margin-top: 50px !important;
+        }
+        .location{
+            margin-left: auto;
+        }
+    
+        .welcome,
+        .location,
+        .stay-informed,
+        .user-info {
+            width: 100%; 
+            margin-bottom: 30px;
+        }
+    
+        .location {
+            position: static; 
+            margin-top: 10px; 
+            left: 0; 
+            bottom: 0; 
+        }
+    
+        .stay-informed {
+            position: static; 
+            margin-top: 10px; 
+            bottom: 0; 
+        }
+    
+        .stay-informed form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .stay-informed input[type="email"],
+        .stay-informed input[type="submit"] {
+            width: 100%; 
+            padding: 10px;
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-left: 0;
+            width: 100%;
+        }
+    
+        .site-name {
+            font-size: 2rem;
+            margin-left: 1rem;
+            text-align: left;
+            display: none;
+        }
+    
+        #hamburger {
+            display: block;
+            font-size: 2.8rem;
+            right: 1.5rem;
+            top: 2.6px;
+            color: black;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+         
+        }
+        .hamburger img{
+            width: 2.5rem;
+            height: 2.5rem;
+            bottom: -5px;
+            background-color: #e3e3e3;
+            border-radius: 10px;
+          
+        }
+        #Cart h2 {
+            right: 0%;
+            margin-top: 10%;
+        
+        }
+        .cart-history{
+            margin: 10%;
+
+        }
+    
+        .cart {
+            position: relative;
+            right:30%; 
+            top: 2px;
+        }
+    
+        .cart img {
+            width: 38px;
+            height: 38px;
+    
+        }
+    
+        .info a {
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            position: relative;
+            right:25%;
+            display: none;
+        }
+        .home a{
+            font-size: 1.1rem;
+            padding: 8px 14px;
+            top: 1px;
+        }
+        .home{
+            position: relative;
+            right:15%; 
+        }
+    
+        .usersname h1 {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    
+        .sidebar {
+            width: 60%;
+            height: 100vh;
+            display: block;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .sidebar.show {
+            transform: translateX(0); 
+        }
+        .content-section {
+            margin-left: 0px; 
+        }
+    
+        #WebsitesPricing h3 {
+            font-size: 1.7rem;
+            margin-top: 13%;
+        }
+    
+        .web-plans-box{
+            margin: 20%;
+            gap: 40px;
+            margin-top: 13%;
+    
+        } 
+        #UpdateProfile, #ChangePassword,#billing-settings {
+            max-width: 70%;
+            margin-top: 20% !important;
+            padding: 15px;
+        }
+        #Support{
+            left: 0%;
+            max-width: 70%;
+            margin-top: 10% !important;
+            padding: 15px;
+            margin: 10%;
+        }
+    
+        #UpdateProfile h2, #UpdateProfile h3,
+        #ChangePassword h3 {
+            font-size: 20px;
+        }
+    
+        #UpdateProfile input, #ChangePassword input[type="password"] {
+            font-size: 14px;
+            padding: 10px;
+        }
+    
+        #UpdateProfile button, #ChangePassword button {
+            font-size: 14px;
+            padding: 12px;
+        }
+        #Projects, #AppsPricing{
+            margin-top: 15%;
+        }
+    
+    
+      }
+    
+  @media  (max-width: 650px){
+    #lastLogin {
+        display: block; 
+        padding: 10px; 
+         
+    }
+    .welcome{
+        margin-top: 50px !important;
+    }
+    .location{
+        margin-left: auto;
+    }
+
+    .welcome,
+    .location,
+    .stay-informed,
+    .user-info {
+        width: 100%; 
+        margin-bottom: 30px;
+    }
+
+    .location {
+        position: static; 
+        margin-top: 10px; 
+        left: 0; 
+        bottom: 0; 
+    }
+
+    .stay-informed {
+        position: static; 
+        margin-top: 10px; 
+        bottom: 0; 
+    }
+
+    .stay-informed form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stay-informed input[type="email"],
+    .stay-informed input[type="submit"] {
+        width: 100%; 
+        padding: 10px;
+    }
+    #Cart h2 {
+        right: 0%;
+        margin-top: 10%;
+    
+    }
+    .cart-history{
+        margin: 10%;
+
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .site-name {
+        font-size: 2rem;
+        margin-left: 1rem;
+        text-align: left;
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 2.8rem;
+        right: 1.5rem;
+        top: 2.6px;
+        color: black;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+     
+    }
+    .hamburger img{
+        width: 2.5rem;
+        height: 2.5rem;
+        bottom: -5px;
+        background-color: #e3e3e3;
+        border-radius: 10px;
+      
+    }
+
+    .cart {
+        position: relative;
+        right:30%; 
+        top: 2px;
+    }
+
+    .cart img {
+        width: 38px;
+        height: 38px;
+
+    }
+
+    .info a {
+        font-size: 1.1rem;
+        padding: 8px 14px;
+        position: relative;
+        right:25%;
+        display: none;
+    }
+    .home a{
+        font-size: 1.1rem;
+        padding: 8px 14px;
+        top: 1px;
+    }
+    .home{
+        position: relative;
+        right:15%; 
+    }
+
+    .usersname h1 {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .sidebar {
+        width: 60%;
+        height: 100vh;
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sidebar.show {
+        transform: translateX(0); 
+    }
+    .content-section {
+        margin-left: 0px; 
+    }
+
+    #WebsitesPricing h3 {
+        font-size: 1.7rem;
+        margin-top: 13%;
+    }
+
+    .web-plans-box{
+        margin: 20%;
+        gap: 40px;
+        margin-top: 13%;
+
+    } 
+    #UpdateProfile, #ChangePassword,#billing-settings {
+        max-width: 70%;
+        margin-top: 20% !important;
+        padding: 15px;
+    }
+    #Support{
+        left: 0%;
+        max-width: 70%;
+        margin-top: 10% !important;
+        padding: 15px;
+        margin: 10%;
+    }
+
+    #UpdateProfile h2, #UpdateProfile h3,
+    #ChangePassword h3 {
+        font-size: 20px;
+    }
+
+    #UpdateProfile input, #ChangePassword input[type="password"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #UpdateProfile button, #ChangePassword button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    #Projects, #AppsPricing{
+        margin-top: 15%;
+    }
+
+
+  }
+
+
+    
+ 
+  @media  (min-width: 535px) and (max-width: 649px){
+    #lastLogin {
+        display: block; 
+        padding: 10px; 
+         
+    }
+    .welcome{
+        margin-top: 50px !important;
+    }
+
+    .welcome,
+    .location,
+    .stay-informed,
+    .user-info {
+        width: 100%; 
+        margin-bottom: 30px;
+    }
+
+    .location {
+        position: static; 
+        margin-top: 10px; 
+        left: 0; 
+        bottom: 0; 
+    }
+
+    .stay-informed {
+        position: static; 
+        margin-top: 10px; 
+        bottom: 0; 
+    }
+
+    .stay-informed form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stay-informed input[type="email"],
+    .stay-informed input[type="submit"] {
+        width: 100%; 
+        padding: 10px;
+    }
+    #Cart h2 {
+        right: 5%;
+        margin-top: 15%;
+    }
+
+    .cart-history {
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 10%;
+        margin: 5%;
+    }
+
+    .cart-history th, 
+    .cart-history td {
+        padding: 8px;
+    }
+    .payment-history{
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .payment-history th,
+    .payment-history td{
+        padding: 8px;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .site-name {
+        font-size: 2rem;
+        margin-left: 1rem;
+        text-align: left;
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 2.8rem;
+        right: 1.5rem;
+      
+        color: black;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        top: 2px;
+     
+    }
+    .hamburger img{
+        width: 2rem;
+        height: 2rem;
+        bottom: -5px;
+        background-color: #e3e3e3;
+        border-radius: 10px;
+      
+    }
+
+    .cart {
+        position: relative;
+        right:30%; 
+        top: 2px;
+    }
+
+    .cart img {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .info a {
+        font-size: 1rem;
+        padding: 4px 7px;
+        position: relative;
+        right:35%;
+        display: none;
+    }
+    .home a{
+        font-size: 1rem;
+        padding: 4px 7px;
+        top: 2px;
+    }
+    .home{
+        position: relative;
+        right:35%; 
+    }
+
+    .usersname h1 {
+        font-size: 1.2rem;
+        text-align: left;
+        top: 2px;
+    }
+
+    .sidebar {
+        width: 50%;
+        height: 100vh;
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sidebar.show {
+        transform: translateX(0); 
+    }
+    .content-section {
+        margin-left: 0px; 
+    }
+
+    #WebsitesPricing h3 {
+        font-size: 1.7rem;
+        margin-top: 13%;
+    }
+
+    .web-plans-box{
+        margin: 20%;
+        gap: 40px;
+        margin-top: 13%;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px, 2fr));
+
+    } 
+    #UpdateProfile, #ChangePassword,#billing-settings {
+        max-width: 80%;
+        margin-top: 30% !important;
+        padding: 15px;
+    }
+    #Support{
+        left: 0%;
+        max-width: 80%;
+        margin-top: 10% !important;
+        padding: 15px;
+        margin: 10%;
+    }
+
+    #UpdateProfile h2, #UpdateProfile h3,
+    #ChangePassword h3 {
+        font-size: 20px;
+    }
+
+    #UpdateProfile input, #ChangePassword input[type="password"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #UpdateProfile button, #ChangePassword button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    #Projects, #AppsPricing{
+        margin-top: 15%;
+    }
+
+
+  }
+
+  @media  (min-width: 360px) and (max-width: 534px){
+    #lastLogin {
+        display: block; 
+        padding: 10px; 
+         
+    }
+    .welcome{
+        margin-top: 50px !important;
+    }
+
+    .welcome,
+    .location,
+    .stay-informed,
+    .user-info {
+        width: 100%; 
+        margin-bottom: 30px;
+    }
+
+    .location {
+        position: static; 
+        margin-top: 10px; 
+        left: 0; 
+        bottom: 0; 
+    }
+
+    .stay-informed {
+        position: static; 
+        margin-top: 10px; 
+        bottom: 0; 
+    }
+
+    .stay-informed form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stay-informed input[type="email"],
+    .stay-informed input[type="submit"] {
+        width: 100%; 
+        padding: 10px;
+    }
+    #Cart h2 {
+        right: 3%;
+        margin-top: 20%;
+    }
+
+    .cart-history {
+        font-size: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 10%;
+        margin: 5%;
+    }
+
+    .cart-history th, 
+    .cart-history td {
+        padding: 6px;
+    }
+    .payment-history{
+        font-size: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .payment-history th,
+    .payment-history td{
+        padding: 6px;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+    #hamburger {
+        display: block;
+        font-size: 2.8rem;
+        right: 1.5rem;
+        color: black;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        top: 2px;
+     
+    }
+    .hamburger img{
+        width: 2rem;
+        height: 2rem;
+        bottom: -5px;
+        background-color: #e3e3e3;
+        border-radius: 10px;
+      
+    }
+
+    .cart {
+        position: relative;
+        right:22%; 
+        top: 2px;
+    }
+
+    .cart img {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .info a {
+        font-size: 1rem;
+        padding: 4px 7px;
+        position: relative;
+        right:35%;
+        display: none;
+    }
+    .home a{
+        font-size: 1rem;
+        padding: 4px 7px;
+        top: 2px;
+    }
+    .home{
+        position: relative;
+        right:35%; 
+    }
+
+    .usersname h1 {
+        font-size: 1.2rem;
+        text-align: left;
+        top: 2px;
+    }
+
+    .sidebar {
+        width: 65%;
+        height: 100vh;
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sidebar.show {
+        transform: translateX(0); 
+    }
+    .content-section {
+        margin-left: 0px; 
+    }
+
+    #WebsitesPricing h3 {
+        font-size: 1.3rem;
+        margin-top: 25%;
+    }
+
+    .web-plans-box{
+        margin: 20%;
+        gap: 40px;
+        margin-top: 13%;
+        grid-template-columns: repeat(1, minmax(300px, 2fr));
+
+    } 
+    #UpdateProfile, #ChangePassword,#billing-settings {
+        max-width: 80%;
+        margin-top: 30% !important;
+        padding: 15px;
+        margin: 5%;
+    }
+    #Support{
+        left: 0%;
+        max-width: 80%;
+        margin-top: 25% !important;
+        padding: 15px;
+        margin: 10%;
+    }
+
+    #UpdateProfile h2, #UpdateProfile h3,
+    #ChangePassword h3 {
+        font-size: 15px;
+    }
+
+    #UpdateProfile input, #ChangePassword input[type="password"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #UpdateProfile button, #ChangePassword button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    #Projects, #AppsPricing{
+        margin-top: 15%;
+    }
+  }
+
+
+  @media  (max-width: 359px){
+    #lastLogin {
+        display: block; 
+        padding: 10px; 
+         
+    }
+    .welcome{
+        margin-top: 50px !important;
+    }
+
+    .welcome,
+    .location,
+    .stay-informed,
+    .user-info {
+        width: 100%; 
+        margin-bottom: 30px;
+    }
+
+    .location {
+        position: static; 
+        margin-top: 10px; 
+        left: 0; 
+        bottom: 0; 
+    }
+
+    .stay-informed {
+        position: static; 
+        margin-top: 10px; 
+        bottom: 0; 
+    }
+
+    .stay-informed form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stay-informed input[type="email"],
+    .stay-informed input[type="submit"] {
+        width: 100%; 
+        padding: 10px;
+    }
+    #Cart h2 {
+        right: 3%;
+        margin-top: 20%;
+    }
+
+    .cart-history {
+        font-size: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 10%;
+        margin: 5%;
+    }
+
+    .cart-history th, 
+    .cart-history td {
+        padding: 6px;
+    }
+    .payment-history{
+        font-size: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .payment-history th,
+    .payment-history td{
+        padding: 6px;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+    #hamburger {
+        display: block;
+        font-size: 2.8rem;
+        right: 1.5rem;
+        color: black;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        top: 2px;
+     
+    }
+    .hamburger img{
+        width: 2rem;
+        height: 2rem;
+        bottom: -5px;
+        background-color: #e3e3e3;
+        border-radius: 10px;
+      
+    }
+
+    .cart {
+        position: relative;
+        right:22%; 
+        top: 2px;
+    }
+
+    .cart img {
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .info a {
+        font-size: 1rem;
+        padding: 4px 7px;
+        position: relative;
+        right:35%;
+        display: none;
+    }
+    .home a{
+        font-size: 1rem;
+        padding: 4px 7px;
+        top: 2px;
+    }
+    .home{
+        position: relative;
+        right:35%; 
+    }
+
+    .usersname h1 {
+        font-size: 1.2rem;
+        text-align: left;
+        top: 2px;
+    }
+
+    .sidebar {
+        width: 65%;
+        height: 100vh;
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .sidebar.show {
+        transform: translateX(0); 
+    }
+    .content-section {
+        margin-left: 0px; 
+    }
+
+    #WebsitesPricing h3 {
+        font-size: 1.3rem;
+        margin-top: 25%;
+    }
+
+    .web-plans-box{
+        margin: 20%;
+        gap: 40px;
+        margin-top: 13%;
+        grid-template-columns: repeat(1, minmax(300px, 2fr));
+
+    } 
+    #UpdateProfile, #ChangePassword,#billing-settings {
+        max-width: 80%;
+        margin-top: 30% !important;
+        padding: 15px;
+        margin: 5%;
+    }
+    #Support{
+        left: 0%;
+        max-width: 80%;
+        margin-top: 25% !important;
+        padding: 15px;
+        margin: 10%;
+    }
+
+    #UpdateProfile h2, #UpdateProfile h3,
+    #ChangePassword h3 {
+        font-size: 15px;
+    }
+
+    #UpdateProfile input, #ChangePassword input[type="password"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #UpdateProfile button, #ChangePassword button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    #Projects, #AppsPricing{
+        margin-top: 15%;
+    }
+
+  }
+
+
+    
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+    
+
+

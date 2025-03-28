@@ -450,21 +450,30 @@ text-decoration: none;
 
 @media (min-width: 921px)and  (max-width: 1300px){
     .site-name{
-        font-size: 2.5rem;
-        top: -1rem;
+        top: 0.2rem;
        
     }
     .logo{
-        width: 4rem;
-        height: 4rem; 
+        width: 5%;
+        height: auto;
+        top: 1rem;
+        position: relative;
     }
-    #google_translate_element{
-        margin-left: 2rem;
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 10px;
+    }
+    #hamburger{
+        bottom: -1.5rem; 
+        right: 1rem;
+        font-size: 3rem;
+        display: flex;
+        top: 0.1rem; 
     }
     .menu {
         display: none;
-       
-
     }
     .sidebar {
         text-align: start;
@@ -487,34 +496,26 @@ text-decoration: none;
         font-size: 20px;
     }
    
-    #hamburger{
-        bottom: -1.5rem; 
-        right: 1rem;
-        font-size: 3rem;
-        display: block;
-        top: 0.1rem;
-       
-    }
-    .hamburger img{
-        width: 4rem;
-        height: 4rem;
-        position: relative;
-        top: 10px;
-    }
 }
 
 
-@media (max-width: 910px) {
+@media (max-width: 915px) {
     .site-name{
-        font-size: 2rem;
-        top: -1rem;
+        top: 0rem;
+       
     }
     .logo{
-        width: 4rem;
-        height: 4rem; 
+        width: 5%;
+        height: auto;
+        top: 0.7rem;
+        position: relative;
     }
-    #google_translate_element{
-        margin-left: 2rem;
+ 
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 10px;
     }
     #hamburger{
         bottom: -1.5rem; 
@@ -523,10 +524,6 @@ text-decoration: none;
         display: flex;
         top: 0.1rem;
        
-    }
-    .hamburger img{
-        width: 2rem;
-        height: 4rem; 
     }
     .menu{
         display: none;
@@ -565,34 +562,30 @@ text-decoration: none;
     
 }
 @media  (max-width: 650px){
+    .site-name{
+        top: 0.2rem;
+       
+    }
+    .logo{
+        width: 5%;
+        height: auto;
+        top: 0.7rem;
+        position: relative;
+    }
+ 
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 2px;
+    }
     #hamburger {
-        font-size: 2rem; 
-        right: 1rem;
-        top: 0.1rem;
+         font-size: 2rem; 
+         right: 1rem;
+         top: 0.1rem;
          bottom: 0rem;
          display: flex;
     }
-    .hamburger img{
-        width: 2rem;
-        height: 3rem;
-        position: relative;
-    }
-    .logo {
-        width: 2.5rem; 
-        height: 2.5rem;
-    }
-    .site-name{
-        font-size: 1.2rem;
-        top: -0.8rem;
-        margin-left: 2rem;
-       
-    }
-    #google_translate_element{
-     display: block;
-      
-
-    }
-   
     .menu{
         display: none;
     }
@@ -632,150 +625,147 @@ text-decoration: none;
     }
 }
 
-@media  (max-width: 535px){
+@media  (max-width: 540px){
+    .site-name{
+        font-size: 1.3rem;
+        top: 0.1rem;
+       
+    }
+    .logo{
+        width: 5%;
+        height: auto;
+        top: 0.5rem;
+        position: relative;
+    }
+ 
+    .hamburger img{
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        top: 1px;
+    }
     #hamburger {
-      font-size: 1.5rem; 
-      top: 0.3rem;
-      right: 1rem;
-       bottom: 0rem;
-       display: flex;
-     
-  }
-  .hamburger img{
-    width: 2rem;
-    height: 3rem;
-    position: relative;
-}
-  
-.logo {
-    width: 2.5rem; 
-    height: 2.5rem;
-}
-.site-name{
-    font-size: 1rem;
-    top: -0.7rem;
-    margin-left: 2rem;
+     font-size: 1.5rem; 
+     top: 0.1rem;
+     right: 1rem;
+     bottom: 0rem;
+     display: flex;
    
-}
-#google_translate_element{
-    display: none;
+    }
+    .menu{
+        display: none;
+    }
     
-}
-.menu{
-    display: none;
-}
-
-.sidebar {
-    text-align: start;
-    transform: translateX(-100%);
-    width: 80%;
-    height: 200vh;
-    display: block;
-}
-.sidebar-submenu li a {
-    font-size: 1.1rem;  
-  }
-   .sidebar ul div a{
-    font-size: 1.2rem;
-  }
-   .sidebar-dropdown .material-symbols-outlined {
-    font-size: 25px;
-  }
-
-  .sidebar-submenu .material-symbols-outlined {
-    font-size: 15px;
-  }
-.Products-categories h2{
-    font-size: 1.5rem;
-  }
-.investment-opportunities{
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    .sidebar {
+        text-align: start;
+        transform: translateX(-100%);
+        width: 80%;
+        height: 200vh;
+        display: block;
     }
-    .partnership h1{
+    .sidebar-submenu li a {
+        font-size: 1.1rem;  
+      }
+       .sidebar ul div a{
+        font-size: 1.2rem;
+      }
+       .sidebar-dropdown .material-symbols-outlined {
+        font-size: 25px;
+      }
+    
+      .sidebar-submenu .material-symbols-outlined {
+        font-size: 15px;
+      }
+    .Products-categories h2{
         font-size: 1.5rem;
+      }
+    .investment-opportunities{
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        }
+        .partnership h1{
+            font-size: 1.5rem;
+        }
+        .partnership p{
+            font-size: 1rem;
+        }
+    .footer{
+        grid-template-columns: repeat(1, minmax(200px, 1fr)); 
+        padding: 20px; 
     }
-    .partnership p{
-        font-size: 1rem;
-    }
-.footer{
-    grid-template-columns: repeat(1, minmax(200px, 1fr)); 
-    padding: 20px; 
-}
+
 }
 
-@media  (max-width: 365px){
+@media  (max-width: 375px){
+    .site-name{
+        font-size: 1.3rem;
+        top: -0.2rem !important;
+       
+    }
+    .logo{
+        width: 6%;
+        height: auto;
+        top: 0.4rem;
+        position: relative;
+    }
+ 
+    .hamburger img{
+        width: 1.8rem;
+        height: 1.8rem;
+        position: relative;
+        top: 0.1px;
+    }
     #hamburger {
-      font-size: 1.5rem; 
-      top: 0.3rem;
-      right: 1rem;
-       bottom: 0rem;
-       display: flex;
-     
-  }
-  .hamburger img{
-    width: 2rem;
-    height: 3rem;
-    position: relative;
-    bottom: 6px;
-}
-  .logo {
-    width: 2.5rem; 
-    height: 2.5rem;
-}
-.site-name{
-    font-size: 1rem;
-    top: -0.7rem;
-    margin-left: 2rem;
-   
-}
-#google_translate_element{
-    display: none;
-    
-}
-.menu{
-    display: none;
-}
-.sidebar {
-  text-align: start;
-  transform: translateX(-100%);
-  width: 80%;
-  height: 200vh;
-  display: block;
-}
-.sidebar-submenu li a {
-    font-size: 1rem;  
-  }
-   .sidebar ul div a{
-    font-size: 1rem;
-  }
-   .sidebar-dropdown .material-symbols-outlined {
-    font-size: 20px;
-  }
-
-  .sidebar-submenu .material-symbols-outlined {
-    font-size: 15px;
-  }
-.Products-categories h2{
-    font-size: 1.4rem;
-
-  }
-  .Products-categories{
-    margin: 20px;
-
-  }
-
-.investment-opportunities{
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
+     font-size: 1.5rem; 
+     top: 0.3rem;
+     right: 1rem;
+     bottom: 0rem;
+     display: flex;  
     }
-    .partnership h1{
-        font-size: 1.5rem;
+    .menu{
+        display: none;
     }
-    .partnership p{
+    .sidebar {
+      text-align: start;
+      transform: translateX(-100%);
+      width: 80%;
+      height: 200vh;
+      display: block;
+    }
+    .sidebar-submenu li a {
+        font-size: 1rem;  
+      }
+       .sidebar ul div a{
         font-size: 1rem;
+      }
+       .sidebar-dropdown .material-symbols-outlined {
+        font-size: 20px;
+      }
+    
+      .sidebar-submenu .material-symbols-outlined {
+        font-size: 15px;
+      }
+    .Products-categories h2{
+        font-size: 1.4rem;
+    
+      }
+      .Products-categories{
+        margin: 20px;
+    
+      }
+    
+    .investment-opportunities{
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        }
+        .partnership h1{
+            font-size: 1.5rem;
+        }
+        .partnership p{
+            font-size: 1rem;
+        }
+    .footer{
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        padding: 20px; 
+        margin-top: 0%;
     }
-.footer{
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-    padding: 20px; 
-    margin-top: 0%;
-}
+
 }

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:wght@400;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+    font-family: "Kanit", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    zoom: 95%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: #f8f9fa;
+    background-size: cover;
+    
+  }
+
+.header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-name{
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #32404D;
+    position: relative;
+    font-family: "Kanit", serif;
+    display: block;
+
+}
+.dashboard{
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: gray;
+    position: relative;
+    font-family: "Kanit", serif;
+    display: block;
+ 
+}
+.dashboard a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.form-container{
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    position: relative;
+    left: 3%;
+    top: 15%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.form-container h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.form-container label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: start;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+.form-container button[type="button"] {
+    width: 50%;
+    padding: 14px;
+    background-color:#007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-container input[type="button"]:hover {
+    background-color: #a2bcd8;
+}
+
+

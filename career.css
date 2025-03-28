@@ -34,28 +34,25 @@ body {
     flex-direction: row;
     
 }
-
 .logo{
-   width: 3rem;
-   height: 3rem;
-   margin-left: 1rem;
-
-}
-.site-name{
+    width: 5%;
+    height: auto;
+    top: 1.1rem;
+    position: relative;
+    margin-left: 1rem;
+ 
+ }
+ .site-name{
     margin-left: 2rem;
     font-size: 2rem;
     font-weight: bolder;
     color: #32404D;
     position: relative;
-    top: -1rem;
+    top: -1.2rem;
     font-family: "Kanit", serif;
 
 }
-#google_translate_element{
-  
-    margin-left: 40rem;
-    display: block; 
-}
+
 #hamburger{
     position: absolute;
     bottom: -2rem;
@@ -65,6 +62,10 @@ body {
     right: 1rem;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+}
+.hamburger img{
+    position: relative;
+    bottom: 1%;
 }
 
 .menu-icon {
@@ -598,17 +599,18 @@ text-decoration: none;
 
 @media (min-width: 921px)and  (max-width: 1300px){
     .site-name{
-        font-size: 2.5rem;
-        top: -1rem;
+        top: 0.2rem;
        
     }
     .logo{
-        width: 4rem;
-        height: 4rem; 
+        width: 5%;
+        height: auto;
+        top: 1rem;
+        position: relative;
     }
     .hamburger img{
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         position: relative;
         top: 10px;
     }
@@ -617,10 +619,7 @@ text-decoration: none;
         right: 1rem;
         font-size: 3rem;
         display: flex;
-        top: 0.1rem;
-    }
-    #google_translate_element{
-        margin-left: 2rem;
+        top: 0.1rem; 
     }
     .service-info {
         left: 0%;
@@ -653,21 +652,23 @@ text-decoration: none;
 }
 
 
-@media (max-width: 910px) {
+@media (max-width: 915px) {
     .site-name{
-        font-size: 2rem;
-        top: -1rem;
+        top: 0rem;
+       
     }
     .logo{
-        width: 4rem;
-        height: 4rem; 
+        width: 5%;
+        height: auto;
+        top: 0.7rem;
+        position: relative;
     }
-    #google_translate_element{
-        margin-left: 2rem;
-    }
-    .service-info {
-        left: 0%;
-       
+ 
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 10px;
     }
     #hamburger{
         bottom: -1.5rem; 
@@ -677,11 +678,11 @@ text-decoration: none;
         top: 0.1rem;
        
     }
-    .hamburger img{
-        width: 3rem;
-        height: 3rem;
+
+    .service-info {
+        left: 0%;
+       
     }
-    
     .menu{
         display: none;
     }
@@ -720,28 +721,35 @@ text-decoration: none;
 
 
 @media  (max-width: 650px){
+    .site-name{
+        top: 0.2rem;
+       
+    }
+    .logo{
+        width: 5%;
+        height: auto;
+        top: 0.7rem;
+        position: relative;
+    }
+ 
+    .hamburger img{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 2px;
+    }
     #hamburger {
-        font-size: 2rem; 
-        right: 1rem;
-        top: 0.1rem;
+         font-size: 2rem; 
+         right: 1rem;
+         top: 0.1rem;
          bottom: 0rem;
          display: flex;
-    }
-   
-    .logo {
-        width: 2.5rem; 
-        height: 2.5rem;
     }
     .service-info {
         left: 0%;
        
     }
-    .site-name{
-        font-size: 1.2rem;
-        top: -0.8rem;
-        margin-left: 2rem;
-       
-    }
+
     .sidebar {
         text-align: start;
         transform: translateX(-100%);
@@ -763,15 +771,6 @@ text-decoration: none;
       .sidebar-submenu .material-symbols-outlined {
         font-size: 20px;
       }
-    .hamburger img{
-        width: 2rem;
-        height: 3rem;
-        position: relative;
-        bottom: 5px;
-    }
-    #google_translate_element{
-     display: block;
-    }
  
     .category {
         grid-template-columns: repeat(2, 1fr);
@@ -806,26 +805,33 @@ text-decoration: none;
 
 
 
-  @media  (max-width: 535px){
-  #hamburger {
-    font-size: 1.5rem; 
-    top: 0.3rem;
-    right: 1rem;
+  @media  (max-width: 540px){
+    .site-name{
+        font-size: 1.3rem;
+        top: -0.3rem !important;
+       
+    }
+    .logo{
+        width: 5%;
+        height: auto;
+        top: 0.5rem;
+        position: relative;
+    }
+ 
+    .hamburger img{
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        top: 1px;
+    }
+    #hamburger {
+     font-size: 1.5rem; 
+     top: 0.1rem;
+     right: 1rem;
      bottom: 0rem;
      display: flex;
    
-}
-.hamburger img{
-    width: 2rem;
-    height: 3rem;
-    position: relative;
-    bottom: 10px;
-}
-
-.logo {
-    width: 2.5rem; 
-    height: 2.5rem;
-}
+    }
 .service-info {
     left: 0%;
    
@@ -836,10 +842,7 @@ text-decoration: none;
     margin-left: 2rem;
    
 }
-#google_translate_element{
-    display: none;
-    
-}
+
 .menu{
     display: none;
 }
@@ -899,34 +902,32 @@ text-decoration: none;
 }
 
 
-@media  (max-width: 365px){
+@media  (max-width: 375px){
+    .site-name{
+        font-size: 1.3rem;
+        top: -0.2rem !important;
+       
+    }
+    .logo{
+        width: 6%;
+        height: auto;
+        top: 0.4rem;
+        position: relative;
+    }
+ 
+    .hamburger img{
+        width: 1.8rem;
+        height: 1.8rem;
+        position: relative;
+        top: 0.1px;
+    }
     #hamburger {
-      font-size: 1.5rem; 
-      top: 0.3rem;
-      right: 1rem;
-       bottom: 0rem;
-       display: flex;
-     
-  }
-
-  .logo {
-      width: 2.5rem; 
-      height: 2.5rem;
-  }
-  .service-info {
-    left: 0%;
-   
-}
-  .site-name{
-      font-size: 1rem;
-      top: -0.7rem;
-      margin-left: 2rem;
-     
-  }
-  #google_translate_element{
-      display: none;
-      
-  }
+     font-size: 1.5rem; 
+     top: 0.3rem;
+     right: 1rem;
+     bottom: 0rem;
+     display: flex;  
+    }
   .menu{
       display: none;
   }
@@ -937,12 +938,7 @@ text-decoration: none;
     height: 200vh;
     display: block;
 }
-.hamburger img{
-    width: 2rem;
-    height: 3rem;
-    position: relative;
-    bottom: 6px;
-}
+
 .sidebar-submenu li a {
     font-size: 1rem;  
   }

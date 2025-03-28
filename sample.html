@@ -1,0 +1,261 @@
+.choose-plan, .add-to-cart {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px 0;
+}
+.choose-plan:hover, .add-to-cart:hover {
+    background-color: #5640c8;
+}
+.plan-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+.plan-features li {
+    padding: 5px 0;
+}
+.domain-selection {
+    margin-top: 15px;
+    text-align: center;
+}
+.domain-selection select, .domain-selection input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.domain-price {
+    font-weight: bold;
+    color: #d9534f;
+    margin-top: 5px;
+}
+</style>
+
+<div class="domain-selection">
+    <label for="domain">Choose a domain:</label>
+    <input type="text" id="domain" placeholder="Enter domain name">
+    <select id="tld">
+        <option value="com">.com</option>
+        <option value="net">.net</option>
+        <option value="org">.org</option>
+        <option value="ca">.ca</option>
+        <option value="cc">.cc</option>
+        <option value="me">.me</option>
+        <option value="africa">.africa</option>
+        <option value="page">.page</option>
+    </select>
+    <p class="domain-price">Price: <span id="domain-price">₦0</span></p>
+    <button class="add-to-cart">Add Domain to Cart</button>
+</div>
+
+
+<script>
+    document.getElementById("tld").addEventListener("change", function() {
+        let prices = {
+            "com": 5000,
+            "net": 4500,
+            "org": 4000,
+            "ca": 5500,
+            "cc": 6000,
+            "me": 7000,
+            "africa": 3500,
+            "page": 4800
+        };
+        let selectedTLD = document.getElementById("tld").value;
+        document.getElementById("domain-price").innerText = "₦" + prices[selectedTLD];
+    });
+</script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const phoneInput = document.getElementById("phone");
+    const passwordInput = document.getElementById("password");
+    const phoneLabel = document.querySelector("label[for='phone']");
+    const passwordLabel = document.querySelector("label[for='password']");
+    const submitButton = document.querySelector("input[type='submit']");
+    const loader = document.createElement("div");  // Create a spinner element
+
+    // Style the spinner
+    loader.className = "loader";
+    loader.style.display = "none"; // Hidden initially
+    loader.style.border = "5px solid #f3f3f3";
+    loader.style.borderTop = "5px solid #3498db";
+    loader.style.borderRadius = "50%";
+    loader.style.width = "50px";
+    loader.style.height = "50px";
+    loader.style.animation = "spin 1s linear infinite";
+    loader.style.margin = "20px auto";
+    loader.style.textAlign = "center";
+
+    // Append spinner below the form
+    form.parentNode.insertBefore(loader, form.nextSibling);
+
+    function validatePhone() {
+        const phonePattern = /^[0-9]{7,25}$/;
+        if (!phonePattern.test(phoneInput.value)) {
+            phoneLabel.textContent = "Invalid phone number (7-25 digits only)";
+            phoneLabel.style.color = "red";
+            return false;
+        } else {
+            phoneLabel.textContent = "Valid phone number ✅";
+            phoneLabel.style.color = "green";
+            return true;
+        }
+    }
+
+    function validatePassword() {
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+        if (!passwordPattern.test(passwordInput.value)) {
+            passwordLabel.textContent = "Weak password";
+            passwordLabel.style.color = "red";
+            return false;
+        } else {
+            passwordLabel.textContent = "Strong password ✅";
+            passwordLabel.style.color = "green";
+            return true;
+        }
+    }
+
+    // Real-time validation
+    phoneInput.addEventListener("input", validatePhone);
+    passwordInput.addEventListener("input", validatePassword);
+
+    // Validate before submission & show loader
+    form.addEventListener("submit", function (event) {
+        if (!validatePhone() || !validatePassword()) {
+            event.preventDefault(); // Prevent form submission if invalid
+            alert("Please fix errors before submitting.");
+        } else {
+            event.preventDefault(); // Prevent immediate submission
+            form.style.display = "none"; // Hide form
+            loader.style.display = "block"; // Show loader
+            submitButton.disabled = true; // Disable button to prevent multiple clicks
+
+            // Simulate a delay (e.g., waiting for server response)
+            setTimeout(() => {
+                alert("Hello! Your registration was successful! A welcome email has been sent to you, and you will be redirected to your dashboard.");
+                window.location.href = "mydashboard.php"; // Redirect after success
+            }, 3000); // 3 seconds delay
+        }
+    });
+
+    // Handle success message in URL (e.g., ?success=1)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("success")) {
+        alert("Hello! Your registration was successful! A welcome email has been sent to you, and you will be redirected to your dashboard.");
+        window.location.href = "mydashboard.php";
+    }
+});
+
+// Toggle password visibility
+const togglePassword = document.getElementById('togglePassword');
+const password = document.getElementById('password');
+
+togglePassword.addEventListener('click', function () {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    this.textContent = type === 'password' ? '👁' : '👁‍🗨';
+});
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let checkoutButton = document.getElementById("checkout-button");
+
+    if (checkoutButton) {
+        checkoutButton.addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            let paymentMethod = document.querySelector('select[name="payment_method"]').value;
+
+            if (typeof totalAmount === "undefined" || totalAmount <= 0) {
+                alert("Invalid amount. Please add items to your cart.");
+                return;
+            }
+
+            if (paymentMethod === "Paystack") {
+                let handler = PaystackPop.setup({
+                    key: 'pk_test_b795400fb17600dbc52bd090f351624ef243845e', // Paystack Public Key
+                    email: userEmail, 
+                    amount: totalAmount, 
+                    currency: "NGN",
+                    ref: "TXN_" + Math.floor((Math.random() * 1000000000) + 1),
+                    callback: function(response) {
+                        window.location.href = "paystack_verify.php?reference=" + response.reference;
+                    },
+                    onClose: function() {
+                        alert('Transaction was not completed');
+                    }
+                });
+                handler.openIframe();
+            } else {
+                document.querySelector("form").submit();
+            }
+        });
+    } else {
+        console.error("Checkout button not found!");
+    }
+});
+
+
+
+
+
+
+
+
+<?php
+session_start();
+include('db.php'); 
+
+if (!isset($_GET['reference'])) {
+    die("No reference supplied");
+}
+
+$reference = $_GET['reference'];
+$paystack_secret_key = "sk_test_e5f028dd8672a755aa6de42fa99e959ac137f763"; // Replace with your secret key
+
+// Call Paystack API
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://api.paystack.co/transaction/verify/" . $reference);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Authorization: Bearer " . $paystack_secret_key,
+    "Content-Type: application/json"
+]);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$paystack_response = json_decode($response, true);
+
+
+if ($paystack_response['status'] && $paystack_response['data']['status'] == "success") {
+    $amount_paid = $paystack_response['data']['amount'] / 100; 
+
+    // Update the database
+    $update_sql = "UPDATE user_payments SET status = 'Completed' WHERE transaction_id = ?";
+    $stmt = $conn->prepare($update_sql);
+    $stmt->bind_param("s", $reference);
+    $stmt->execute();
+    $stmt->close();
+
+    $_SESSION['success'] = "Payment successful!";
+    header("Location: mydashboard.php"); 
+    exit();
+} else {
+    $_SESSION['error'] = "Payment verification failed!";
+    header("Location: checkoutWebDev.php");
+    exit();
+}
+?>
